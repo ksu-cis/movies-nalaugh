@@ -378,7 +378,7 @@
     "IMDB_Votes": 169858
   },
   {
-    "Title": 1776,
+    "Title": "1776",
     "US_Gross": 0,
     "Worldwide_Gross": 0,
     "US_DVD_Sales": null,
@@ -396,7 +396,7 @@
     "IMDB_Votes": 4099
   },
   {
-    "Title": 1941,
+    "Title": "1941",
     "US_Gross": 34175000,
     "Worldwide_Gross": 94875000,
     "US_DVD_Sales": null,
@@ -599,7 +599,7 @@
     "Worldwide_Gross": 2300000,
     "US_DVD_Sales": null,
     "Production_Budget": 439000,
-    "Release_Date": "Mar 09 2033",
+    "Release_Date": "Mar 09 1933",
     "MPAA_Rating": null,
     "Running_Time_min": null,
     "Distributor": "Warner Bros.",
@@ -54954,7 +54954,7 @@
     "IMDB_Votes": 10233
   },
   {
-    "Title": null,
+    "Title": "Unknown",
     "US_Gross": 26403,
     "Worldwide_Gross": 3080493,
     "US_DVD_Sales": null,

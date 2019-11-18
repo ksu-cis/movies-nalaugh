@@ -16,5 +16,6 @@ namespace Movies
         public float? IMDB_Rating { get; set; }
 
         public float? Rotten_Tomatoes_Rating { get; set; }
+        public string Date { get; set; }
     }
 }
