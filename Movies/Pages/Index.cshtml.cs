@@ -9,7 +9,7 @@ namespace Movies.Pages
 {
     public class IndexModel : PageModel
     {
-        private MovieDatabase MovieDatabase = new MovieDatabase();
+       
         public List<Movie> Movies;
         [BindProperty]
         public string search { get; set; }

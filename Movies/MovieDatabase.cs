@@ -10,25 +10,25 @@ namespace Movies
     /// <summary>
     /// A class representing a database of movies
     /// </summary>
-    public class MovieDatabase
+    public static class MovieDatabase
     {
-        private static List<Movie> movies = new List<Movie>();
+        private static List<Movie> movies;
 
-        /// <summary>
-        /// Loads the movie database from the JSON file
-        /// </summary>
-        public  MovieDatabase()
-        {
 
-            using (StreamReader file = System.IO.File.OpenText("movies.json"))
-            {
-                string json = file.ReadToEnd();
-                movies = JsonConvert.DeserializeObject<List<Movie>>(json);
-            }
+
+
+        public static List<Movie> All {
+            get {
+                if(movies==null)
+                using (StreamReader file = System.IO.File.OpenText("movies.json"))
+                {
+                    string json = file.ReadToEnd();
+                    movies = JsonConvert.DeserializeObject<List<Movie>>(json);
+                   
+                    }
+                return movies;
+            } 
         }
-
-
-        public static List<Movie> All { get { return movies; } }
         public static List<Movie> Search(List<Movie> movies, string search)
         {
             List<Movie> results = new List<Movie>();
