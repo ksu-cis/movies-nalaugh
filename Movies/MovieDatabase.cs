@@ -12,12 +12,12 @@ namespace Movies
     /// </summary>
     public class MovieDatabase
     {
-        private List<Movie> movies = new List<Movie>();
+        private static List<Movie> movies = new List<Movie>();
 
         /// <summary>
         /// Loads the movie database from the JSON file
         /// </summary>
-        public MovieDatabase()
+        public  MovieDatabase()
         {
 
             using (StreamReader file = System.IO.File.OpenText("movies.json"))
@@ -27,8 +27,9 @@ namespace Movies
             }
         }
 
-        public List<Movie> All { get { return movies; } }
-        public List<Movie> Search(List<Movie> movies, string search)
+
+        public static List<Movie> All { get { return movies; } }
+        public static List<Movie> Search(List<Movie> movies, string search)
         {
             List<Movie> results = new List<Movie>();
             foreach (Movie m in movies)
@@ -43,7 +44,7 @@ namespace Movies
             }
             return results;
         }
-        public List<Movie> Rating(List<Movie> movies, List<string> rating)
+        public static List<Movie> Rating(List<Movie> movies, List<string> rating)
         {
             List<Movie> results = new List<Movie>();
             foreach(Movie m in movies)
@@ -55,7 +56,7 @@ namespace Movies
             }
             return results;
         }
-        public List<Movie> MinSearch(List<Movie> movies, float minRating)
+        public static List<Movie> MinSearch(List<Movie> movies, float minRating)
         {
             List<Movie> results = new List<Movie>();
             foreach (Movie m in movies)
@@ -67,7 +68,7 @@ namespace Movies
             }
             return results;
         }
-        public List<Movie> MaxSearch(List<Movie> movies, float maxRating)
+        public static List<Movie> MaxSearch(List<Movie> movies, float maxRating)
         {
             List<Movie> results = new List<Movie>();
             foreach (Movie m in movies)
